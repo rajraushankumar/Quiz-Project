@@ -9,6 +9,18 @@ const optionsEl = document.getElementById("options");
 const timerEl = document.getElementById("timer");
 const nextBtn = document.getElementById("nextBtn");
 const progressEl = document.getElementById("progress");
+const submitBtn = document.getElementById("submitBtn");
+submitBtn.addEventListener("click", () => {
+  clearInterval(timer); // timer stop
+
+  // Directly save result
+  localStorage.setItem("quizScore", score);
+  localStorage.setItem("totalQuestions", questions.length);
+
+  // Instant redirect to result page
+  window.location.href = "result.html";
+});
+
 
 // Shuffle questions randomly
 questions.sort(() => Math.random() - 0.5);

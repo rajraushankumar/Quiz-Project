@@ -7,19 +7,61 @@
 </head>
 <body>
 
-  <div class="result-container">
-    <h1>Quiz Completed</h1>
-    <p id="resultText"></p>
-    <a href="index.html">Restart Quiz</a>
+  <div class="result-box">
+    <h1>Quiz Result</h1>
+
+    <p class="score-text">Correct Answers: <strong>1 / 45</strong></p>
+
+    <div class="percentage-box">
+      <div class="percent correct">
+        <h3>Correct</h3>
+        <p>2.22%</p>
+      </div>
+
+      <div class="percent wrong">
+        <h3>Wrong</h3>
+        <p>97.78%</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="restart-btn">Restart Quiz</a>
   </div>
 
-  <script>
-    const score = localStorage.getItem("quizScore");
-    const total = localStorage.getItem("totalQuestions");
 
-    document.getElementById("resultText").textContent =
-      `You scored ${score} out of ${total}`;
+
+  
+<!-- <h1>Quiz Result</h1>
+
+<p id="scoreText"></p>
+<p id="correctPercent"></p>
+<p id="wrongPercent"></p>
+
+<a href="index.html">Restart Quiz</a> -->
+
+<script>
+    // const score = localStorage.getItem("quizScore");
+    // const total = localStorage.getItem("totalQuestions");
+
+    // document.getElementById("resultText").textContent =
+    //   `You scored ${score} out of ${total}`;
+      
+  const score = Number(localStorage.getItem("quizScore"));
+  const total = Number(localStorage.getItem("totalQuestions"));
+
+  const correctPercentage = ((score / total) * 100).toFixed(2);
+  const wrongPercentage = (100 - correctPercentage).toFixed(2);
+
+  document.getElementById("scoreText").innerText =
+    `Correct Answers: ${score} / ${total}`;
+
+  document.getElementById("correctPercent").innerText =
+    `Correct Percentage: ${correctPercentage}%`;
+
+  document.getElementById("wrongPercent").innerText =
+    `Wrong Percentage: ${wrongPercentage}%`;
+
+
   </script>
-
+  
 </body>
 </html>
