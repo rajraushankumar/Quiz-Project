@@ -1,5 +1,56 @@
 const questions = [
-  // HTML (1–15)
+
+  {
+    question: "Which tag is used to insert an image in HTML?",
+    options: ["<img>", "<image>", "<pic>", "<src>"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which attribute is used to provide a link address in an anchor tag?",
+    options: ["src", "href", "link", "url"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which HTML tag is used to create a line break?",
+    options: ["<br>", "<break>", "<lb>", "<newline>"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which tag is used to create an unordered list?",
+    options: ["<ol>", "<ul>", "<li>", "<list>"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which HTML element is used for the largest heading?",
+    options: ["<h6>", "<heading>", "<h1>", "<head>"],
+    correctAnswer: 2
+  },
+  {
+    question: "Which attribute is used to define inline styles?",
+    options: ["class", "font", "style", "css"],
+    correctAnswer: 2
+  },
+  {
+    question: "Which tag is used to create a table row?",
+    options: ["<td>", "<th>", "<tr>", "<table>"],
+    correctAnswer: 2
+  },
+  {
+    question: "Which HTML tag is used to display preformatted text?",
+    options: ["<pre>", "<code>", "<text>", "<format>"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which tag is used to define a paragraph?",
+    options: ["<para>", "<p>", "<text>", "<pg>"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which HTML tag is used to create a checkbox?",
+    options: ["<input type='checkbox'>", "<checkbox>", "<check>", "<input checkbox>"],
+    correctAnswer: 0
+  }
+
   {
     question: "What does HTML stand for?",
     options: [
